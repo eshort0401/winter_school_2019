@@ -1,0 +1,90 @@
+\documentclass[12pt]{article}
+\usepackage{hyperref}
+\bibliographystyle{agsm}
+\usepackage{har2nat}
+\usepackage{amsmath,amssymb,amsthm,amscd,verbatim,graphicx,color}
+\hypersetup{colorlinks=true, urlcolor=blue, citecolor=black, linkcolor=black}
+\usepackage[x11names, rgb]{xcolor}
+\usepackage[utf8]{inputenc}
+\usepackage[a4paper, margin=1.5cm]{geometry}
+\usepackage[font={small, stretch=1.3}, labelfont=bf]{caption}
+\setlength{\parskip}{0em}
+\renewcommand{\floatpagefraction}{.7}
+\linespread{1.3}
+
+\DeclareMathOperator{\sgn}{sgn}
+
+\title{Winter School 2019}
+\author{Ewan Short}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\section{Todd Lane}
+Models allow reproducible experiments. Hinting at a need for people who can edit code. Reanalyses are MODELS not observations. Clouds and precipitation are weaknesses of reanalysis products. 
+
+``Plug and play" approach with different model components not ideal - need a ``unified" approach where all the parametrisations etc are internally consistent. 
+
+``Forced euler equations" name of our meteorology/climate primitive equations. Forcings ($F_x$ etc terms) come from both physics and parametrisations. 
+
+Equations solved using both spectral and grid based methods. Have to switch constantly between spectral methods and grid methods - land properties etc.~stored on a grid. Regional models all grid based models! ``Physics" and parametrisations typically require a grid. 
+
+Difficult to use grids at poles - EC reduces number of grid points at poles - use filter to slow down model. Other models use a hexagonal grid. MPAS model for example - dynamic core of NCAR model. Requires scale aware physics schemes. Physics schemes are all heavily ``tuned". 
+
+20 years ago, most supercomputer centres were for weather prediction. Tendency not just to increase resolution, but to add complexity. Competition between complexity and resolution in model development. 
+
+Two way nesting also used - finer model upscaled fed into coarser model. UM can only do one-way nesting. Two way nesting prevents examination of the effects of resolution. Can't change vertical resolution with nesting? 
+
+Improvement in skill in SH due to satellite data! Accounts for NH and SH coming together. Errors associated with initial condition error, physics, numerical errors, boundary condition errors (e.g.~larger scale models producing errors in nested grids.)
+
+Periodic boundary conditions are ``exact" - i.e.~invisible to the flow. Don't have to worry about boundary conditions in global models. We don't want reflective boundary conditions (except at lower boundary). Open boundary conditions good for regional models - hard to remove signal entirely. Open boundary conditions are not exact! Affect the flow.
+
+Vertical boundary conditions. ``Damping" - add an extra term to vertical momentum equation, e.g.~Rayleigh friction $-\alpha w$. Key idea is that sponge layer solution includes non-physical terms - cannot be used for physical insight. Sponges also consume resources!
+
+Recommended configuration for WRF includes sponges that are too shallow! 
+
+Spin-up issues in nested models - fine scale features need to ``spin-up". Eddy time-scale in finer model. Also to do with interpolation scheme needed when downscaling boundary conditions. Cannot downscale vertical coordinate in many models (e.g.~WRF) because coordinate depends on physics (e.g.~mass). 
+
+Parametrisations are weakest part of our models! Hard to observe small scale processes. Parametrisations usually deterministic. Surface friction needs to be parametrised - as does gravity wave drag etc. ``Philosophy" between parametrisations can be quite different. 
+
+Reynolds averaging basis of all parametrisations of dynamic processes. Decompose $u=\tilde{u}+u'$ where $\tilde{u}$ is the resolved part of the flow and $u'$ is the unresolved part. Sub into equations of motion. Reynolds stress terms are parametrised. Important to differentiate between parametrising physical processes (i.e.~physics not captured by momentum equations) and parametrisations of terms that are unresolved in momentum equations at given resolution.
+
+$K$ theory involves approximation
+$$\frac{\partial \langle u' u' \rangle }{\partial x} \approx \frac{\partial }{\partial x}\left(-K \frac{\partial \tilde{u}}{\partial x} \right).$$
+Smagorinsky closure used in most models - positive $K$ for particular Richardson numbers. 
+
+$K$ theory is an example of ``first order closure". Zero-order closure assumes $\langle u' w' \rangle =0.$ Can do higher order closures using more terms. Not constrained by observations outside boundary layer - little point in atmosphere models. 
+
+Convective mass flux $Mc = \rho \sigma w_c$ where $\sigma$ is the cloud fraction.
+
+All parametrisations assume scale separation between resolved flow and process being parametrised - i.e.~assumes grid boxes much larger than scale of process being parametrised. This assumption fails for higher resolution models! 
+
+Wingaard (2004) nice paper on grey zone - ``terra incognita". As resolutions increase - parametrised processes are partially resolved - should we parametrise? 
+
+What is ``effective model resolution"? Can't resolve features at grid spacing - need features to be multiples of grid spacing. See Skamarock (2004). Energy density of atmosphere follows power density spectrum. Deviation in WRF resolves approx.~7 times grid spacing. 
+
+You need sub 100 m grid spacing to properly resolve deep convection - would need even smaller to resolve shallow convection! Bryan (2003 MWR). 1st order differencing strongly damped. 2nd order method diffusive. General result!
+
+First order approximation to advection equation actually a second order approx to 
+$$\frac{D u}{Dt} = \frac{-\Delta x}{2} \frac{\partial^2 \phi}{\partial x^2}.$$
+Important to understand model construction.
+
+\subsection{Questions}
+\begin{enumerate}
+\item
+What determines how many nests are used, and the structure of those nests? Is it mostly just trial and error? E.g.~in Wapler plot, why use four grids instead of just two? Due to spin-up issues when going to higher resolution. Also due to interpolation issues when interpolating boundary conditions down to higher resolution grid. Mostly trial and error - no comprehensive theory. 
+\item
+What causes artificial reflection?
+\item
+Given there's so much tuning - why bother with physical basis? Zeb? Answer confusing. Craig says can still impose physics on a larger scale. 
+\end{enumerate}
+
+\section{Nina Ridder - Young Earth System Scientists (YESS)}
+Supports young researchers. International network.
+
+
+\bibliography{../../Bibliography/ewansbibli.bib}
+
+\end{document}
