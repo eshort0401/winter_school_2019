@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.3.8)  24 JUN 2019 12:13
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.3.8)  27 JUN 2019 17:37
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -780,33 +780,29 @@ Overfull \hbox (4.0751pt too wide) in paragraph at lines 64--65
 ". As res-o-lu-tions in-crease - parametrised
  []
 
-[2]
-No file winter_school_2019.bbl.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 89.
-[3]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 89.
+[2] [3] [4] [5] [6] [7] (./winter_school_2019.bbl
+
+Package natbib Warning: Empty `thebibliography' environment on input line 3.
+
+)
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 325.
+ [8] [9]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 325.
  (./winter_school_2019.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 89.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 89.
-
-
-Package rerunfilecheck Warning: File `winter_school_2019.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `winter_school_2019.out':
-(rerunfilecheck)             Before: B0CCD1B29927FF1FF03ED182F05691AF;102
-(rerunfilecheck)             After:  C96E7EC80DBA85B89162D89729A07E8A;189.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 89.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 325.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 325.
+Package rerunfilecheck Info: File `winter_school_2019.out' has not changed.
+(rerunfilecheck)             Checksum: 2C56DE63715FEEAC695DBA7C95EE6C55;1020.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 325.
  ) 
 Here is how much of TeX's memory you used:
- 8920 strings out of 492982
- 129158 string characters out of 6134897
+ 8966 strings out of 492982
+ 129627 string characters out of 6134897
  245206 words of memory out of 5000000
- 12373 multiletter control sequences out of 15000+600000
- 12096 words of font info for 47 fonts, out of 8000000 for 9000
+ 12388 multiletter control sequences out of 15000+600000
+ 12612 words of font info for 49 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 36i,6n,38p,487b,408s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 36i,6n,38p,527b,408s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texl
@@ -815,11 +811,13 @@ mf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist
 /fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/
 type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
 blic/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
-msfonts/cm/cmsy8.pfb>
-Output written on winter_school_2019.pdf (3 pages, 99537 bytes).
+msfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmti12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+tt12.pfb>
+Output written on winter_school_2019.pdf (9 pages, 144081 bytes).
 PDF statistics:
- 72 PDF objects out of 1000 (max. 8388607)
- 57 compressed objects within 1 object stream
- 10 named destinations out of 1000 (max. 500000)
- 17 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 177 PDF objects out of 1000 (max. 8388607)
+ 153 compressed objects within 2 object streams
+ 37 named destinations out of 1000 (max. 500000)
+ 121 words of extra memory for PDF output out of 10000 (max. 10000000)
 
